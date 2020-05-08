@@ -10,6 +10,8 @@ categories:
   - 머신러닝
 tags:
   - 텍스트 마이닝
+
+use_math: true
 last_modified_at: 2020-05-07
 ---
 
@@ -128,3 +130,4 @@ word_list.value_counts().head(10)
 대통령의     5  
 dtype: int64
 
+$$cosine similarity = \sum_{i=1}^N A_i$$
