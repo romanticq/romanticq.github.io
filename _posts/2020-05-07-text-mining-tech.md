@@ -545,7 +545,7 @@ plt.xlabel("Number of topics")
 plt.ylabel("Perplexity score")
 plt.show()
 ```
-> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/perplexity.png?raw=true")
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/perplexity.png?raw=true)
 
 ```python
 coherence_values = []
