@@ -400,7 +400,7 @@ dend = shc.dendrogram(shc.linkage(df, method='ward'))
 ```
 > ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/dendrogram.png?raw=true)
 
-# 4.3 토픽 모델링
+## 4.3 토픽 모델링
 
 `토픽 모델링`은 구조화되지 않은 방대한 문헌집단에서 주제를 찾아내기 위한 통계적 추론 알고리즘이다.
 - 맥락과 관련된 단어들을 이용하여 의미를 가진 단어들을 클러스터링하여 주제를 추론한다.
