@@ -198,6 +198,7 @@ hannanum = Hannanum()
 Data = pd.read_csv('E:\\text-mining\\tmwithpython-master\\군집분석데이터.csv', engine="python")
 Data.head()
 ```
+
 >	검색어	기사내용  
 0	유한양행	유한양행은 얀센 바이오테크(Janssen Biotech Inc)와 EGFR표적 항암...  
 1	유한양행	유한양행이 1조4000억원 규모의 기술이전 계약 체결 소식에 가격제한폭까지 치솟았다...  
