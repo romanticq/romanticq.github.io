@@ -260,7 +260,7 @@ plt.scatter(principalDf.iloc[kmeans.labels_ == 2,0], principalDf.iloc[kmeans.lab
 
 plt.legend()
 ```
-> ![]("assets/images/pca.png")
+> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/pca.png?raw=true")
 
 ***
 
@@ -397,7 +397,7 @@ plt.figure(figsize=(10,7))
 plt.title("Customer Dendrograms")
 dend = shc.dendrogram(shc.linkage(df, method='ward'))
 ```
-> ![]("assets/images/dendrogram.png")
+> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/dendrogram.png?raw=true")
 
 # 4.3 토픽 모델링
 
@@ -545,7 +545,7 @@ plt.xlabel("Number of topics")
 plt.ylabel("Perplexity score")
 plt.show()
 ```
-> ![]("assets/images/perplexity.png")
+> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/perplexity.png?raw=true")
 
 ```python
 coherence_values = []
@@ -561,5 +561,5 @@ plt.xlabel("Number of topics")
 plt.ylabel("Coherence score")
 plt.show()
 ```
-> ![]("assets/images/coherence.png")
+> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/coherence.png?raw=true")
 
