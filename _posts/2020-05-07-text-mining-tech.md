@@ -561,5 +561,5 @@ plt.xlabel("Number of topics")
 plt.ylabel("Coherence score")
 plt.show()
 ```
-> ![]("https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/coherence.png?raw=true")
+> ![](assets/images/coherence.png)
 
