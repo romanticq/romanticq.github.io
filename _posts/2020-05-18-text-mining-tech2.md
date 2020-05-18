@@ -182,6 +182,7 @@ dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
 
 > ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
 
+***
 
 ### 4.4.2 지도 기계학습기반 감성 분석
 
