@@ -146,6 +146,7 @@ disgust          1
 negative         1  
 sadness          1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
+
 >![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_pos.png?raw=true)
 
 
@@ -178,6 +179,7 @@ surprise        2
 disgust         1  
 joy             1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
+
 > ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
 
 
