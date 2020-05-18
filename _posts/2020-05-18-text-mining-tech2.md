@@ -97,7 +97,7 @@ NRC = pd.read_csv("E:\\text-mining\\NRC-Sentiment-Emotion-Lexicons\\NRC-Emotion-
                   engine="python", header=None, sep="\t")
 NRC.head(20)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table2.png?raw=true)
 
 NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부정 + 8가지의 감정` 총 10가지 척도에 대해 0 또는 1로 라벨링되어있다. 따라서 해당 사전은 약 14만 1820개의 행으로 이루어져 있다. 하나의 단어마다 10개씩의 행으로 이루어진 데이터인 셈이다.
 
@@ -105,7 +105,7 @@ NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부�
 NRC = NRC[(NRC != 0).all(1)]
 NRC.head(10)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table3.png?raw=true)
 
 감성분석에 필요한 단어들은 1로 라벨링 되어있는 것들이므로 Dataframe.all() 메서드를 통해 유의미한 라벨들만 추출한다. all()의 파라미터로 0을 입력할 경우 위아래로 탐색하며 1을 입력할 경우 좌우로 탐색한다.
 
@@ -114,7 +114,7 @@ NRC.head(10)
 NRC = NRC.reset_index(drop=True)
 NRC.head(10)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table4.png?raw=true)
 
 ```python
 tokenizer = RegexpTokenizer('[\w]+')
@@ -146,6 +146,7 @@ disgust          1
 negative         1  
 sadness          1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
+>![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_pos.png?raw=true)
 
 
 위는 긍정 리뷰에 대해 EmoLex 분석을 한 결과이다. 부정 리뷰에 대해서도 마찬가지 과정을 수행한다.
@@ -177,6 +178,7 @@ surprise        2
 disgust         1  
 joy             1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
 
 
 ### 4.4.2 지도 기계학습기반 감성 분석
