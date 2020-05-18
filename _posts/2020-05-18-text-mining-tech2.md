@@ -1,3 +1,20 @@
+---
+title: "[텍스트 마이닝] 텍스트 마이닝 기법2"
+excerpt: "텍스트 마이닝 기법에 대해 정리한다."
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/3280_1552550473.jpg
+
+categories:
+  - 머신러닝
+tags:
+  - 텍스트 마이닝
+
+use_math: true
+last_modified_at: 2020-05-18
+---
+
 ## 4.4 감성분석
 
 감성분석은 텍스트에 나타난 긍정, 부정요소를 정량화하는 작업으로 다음과 같은 일들을 수행한다.
@@ -20,7 +37,7 @@
 한국어 감성 분석의 경우 영어로 번역한 후 감성 분석을 수행하거나 한국어 감성 사전을 이용한다.
 
 < 한국어 감성 사전 >
-* `KOSAC` : 개발자의 동의를 얻어 사용 가능 http://word.snu.ac.kr/kosac/index.php
+* `KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>
 * `EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.
 
 ```python
@@ -71,7 +88,7 @@ Afinn 감성 사전을 이용한 감성 분석 결과이다. 긍정리뷰에 해
   
 EmoLex 감성 사전은 다음 링크에서 다운받을 수 있다. 논문, 다국어 감성사전 등을 포함한 자료라 파일은 100mb이나 영어 분석에 필요한 감성 사전은 2mb정도이다. 해당 사전의 파일 이름은 **NRC-Emotion-Lexicon-Wordlevel-v0.92** 이다. 버전에 따라 버전명은 달라질 수 있다.
 
->http://sentiment.nrc.ca/lexicons-for-research/ 에서 **THE SENTIMENT AND EMOTION LEXICONS** 클릭
+> <http://sentiment.nrc.ca/lexicons-for-research/> 에서 **THE SENTIMENT AND EMOTION LEXICONS** 클릭
 
 필요한 패키지는 앞에서 import 했으므로 EmoLex 분석에 필요한 감성 사전을 먼저 로드한다. 
 
