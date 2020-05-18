@@ -54,18 +54,7 @@ import matplotlib.pyplot as plt
 review = pd.read_csv('E:\\text-mining\\IMDB\IMDB-Dataset.csv', engine="python")
 review.head(10)
 ```
->||review|	sentiment|
->|---|---|---|
->|0|	One of the other reviewers has mentioned that ... |positive
->|1|	A wonderful little production. <br /><br />The... |positive
->|2|	I thought this was a wonderful way to spend ti... |positive
->|3|	Basically there's a family where a little boy ... |negative
->|4|	Petter Mattei's "Love in the Time of Money" is... |positive
->|5|	Probably my all-time favorite movie, a story o...	|positive
->|6|	I sure would like to see a resurrection of a u...	|positive
->|7|	This show was an amazing, fresh & innovative i...	|negative
->|8|	Encouraged by the positive comments about this...	|negative
->|9|	If you like original gut wrenching laughter yo...	|positive
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table1.png?raw=true)
 
 ***
 
