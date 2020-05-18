@@ -491,7 +491,7 @@ ldamodel.print_topics(num_words=5)
   
 perplexity는 특정 확률 모델이 실측값을 얼마나 잘 예측하는지 평가할때 이용하는 수치로써 정의는 다음과 같다.
 
-$$ perp = 2^H(p) $$
+$$ perp = 2^{H(p)} $$
 
 $H(p)$는 $p$의 정보 엔트로피 값으로 LDA 과정에서 다음과 같은 식으로 바꿔서 계산한다.
 
