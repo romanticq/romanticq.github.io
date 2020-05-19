@@ -29,17 +29,17 @@ last_modified_at: 2020-05-18
 감성 사전을 이용하여 텍스트에 담긴 감성을 분석한다. 감성 사전은 단어와 감성지표(긍정, 부정 정도)를 대응시켜놓은 자료이다. 사전 기반 분석에서는 감성 사전의 이용이 필수적이다.
   
 **< 자주 쓰이는 감성 사전(영어) >**  
-`AFINN` : Finn Arup Nielsen이 2009 ~ 2011년에 직접 수집한 감성 어휘들에 대해 -5~+5의 점수를 부여한 사전. 2477개의 감성어가 수록되어있다.  
-`EmoLex` : 단어들을 긍정, 부정뿐만 아니라 공포, 기대, 신뢰, 놀람, 슬픔, 기쁨, 역겨움과 같은 8가지 감정으로 분류함. 인간의 정서 정보를 더욱 풍부하게 반영한다. 14,182개의 감성어를 보유하고 있다.  
-`Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.  
-`SentiWordNet` : 단어들을 긍정, 부정, 중립으로 분류. 파이썬 NLTK패키지에 있어 사용이 간편함.  
+  `AFINN` : Finn Arup Nielsen이 2009 ~ 2011년에 직접 수집한 감성 어휘들에 대해 -5~+5의 점수를 부여한 사전. 2477개의 감성어가 수록되어있다.  
+  `EmoLex` : 단어들을 긍정, 부정뿐만 아니라 공포, 기대, 신뢰, 놀람, 슬픔, 기쁨, 역겨움과 같은 8가지 감정으로 분류함. 인간의 정서 정보를 더욱 풍부하게 반영한다. 14,182개의 감성어를 보유하고 있다.  
+  `Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.  
+  `SentiWordNet` : 단어들을 긍정, 부정, 중립으로 분류. 파이썬 NLTK패키지에 있어 사용이 간편함.  
 {: .notice--info}
   
 한국어 감성 분석의 경우 영어로 번역한 후 감성 분석을 수행하거나 한국어 감성 사전을 이용한다.
 
 **< 한국어 감성 사전 >**  
-`KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>  
-`EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.  
+  `KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>  
+  `EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.  
 {: .notice--info}
 
 ***
@@ -67,7 +67,7 @@ import matplotlib.pyplot as plt
 review = pd.read_csv('E:\\text-mining\\IMDB\IMDB-Dataset.csv', engine="python")
 review.head(10)
 ```
-> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table1.png?raw=true)
+![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table1.png?raw=true)
 {: .notice--success}
 
 ***
@@ -112,7 +112,8 @@ NRC = pd.read_csv("E:\\text-mining\\NRC-Sentiment-Emotion-Lexicons\\NRC-Emotion-
                   engine="python", header=None, sep="\t")
 NRC.head(20)
 ```
-> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table2.png?raw=true)
+![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table2.png?raw=true)
+{: .notice--success}
 
 NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부정 + 8가지의 감정` 총 10가지 척도에 대해 0 또는 1로 라벨링되어있다. 따라서 해당 사전은 약 14만 1820개의 행으로 이루어져 있다. 하나의 단어마다 10개씩의 행으로 이루어진 데이터인 셈이다.
 
@@ -120,7 +121,8 @@ NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부�
 NRC = NRC[(NRC != 0).all(1)]
 NRC.head(10)
 ```
-> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table3.png?raw=true)
+![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table3.png?raw=true)
+{: .notice--success}
 
 감성분석에 필요한 단어들은 1로 라벨링 되어있는 것들이므로 Dataframe.all() 메서드를 통해 유의미한 라벨들만 추출한다. all()의 파라미터로 0을 입력할 경우 위아래로 탐색하며 1을 입력할 경우 좌우로 탐색한다.
 
@@ -151,7 +153,7 @@ sentiment_result1 = pd.Series(emotion).value_counts()
 
 print(sentiment_result1, sentiment_result1.plot.bar())
 ```
->positive        14  
+positive        14  
 trust            4  
 anticipation     3  
 joy              2  
@@ -161,9 +163,8 @@ disgust          1
 negative         1  
 sadness          1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
-
->![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_pos.png?raw=true)
-
+![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_pos.png?raw=true)
+{: .notice--success}
 
 위는 긍정 리뷰에 대해 EmoLex 분석을 한 결과이다. 부정 리뷰에 대해서도 마찬가지 과정을 수행한다.
 
@@ -183,7 +184,7 @@ sentiment_result2 = pd.Series(emotion).value_counts()
 
 print(sentiment_result2, sentiment_result2.plot.bar())
 ```
->negative        5  
+negative        5  
 sadness         4  
 anticipation    3  
 fear            3  
@@ -194,8 +195,8 @@ surprise        2
 disgust         1  
 joy             1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
-
-> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
+![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
+{: .notice--success}
 
 ***
 
@@ -253,8 +254,9 @@ x_train_vectorized = vect.transform(x_train)
 
 x_train_vectorized
 ```
-><40000x94476 sparse matrix of type '<class 'numpy.float64'>'
+<40000x94476 sparse matrix of type '<class 'numpy.float64'>'
 	with 3918551 stored elements in Compressed Sparse Row format>
+{: .notice--success}
     
 불용어를 제거한 뒤 TF-IDF 가중치를 이용해 리뷰에 해당하는 column을 문서-단어 매트릭스로 바꾼다.
 
@@ -265,14 +267,16 @@ model = LogisticRegression()
 model.fit(x_train_vectorized, y_train)
 print(model.score(x_train_vectorized, y_train))
 ```
->0.934225
+0.934225
+{: .notice--success}
 
 사이킷런으로 로지스틱 회귀를 수행한 결과 훈련데이터에서 93%의 정확도를 보였다.
 
 ```python
 print(model.score(vect.transform(x_test), y_test))
 ```
->0.8936
+0.8936
+{: .notice--success}
 
 테스트 데이터에서는 89%이다.
 
@@ -282,13 +286,15 @@ clf = DecisionTreeClassifier()
 clf.fit(x_train_vectorized, y_train)
 print(clf.score(x_train_vectorized, y_train))
 ```
->1.0
+1.0
+{: .notice--success}
 
 의사결정나무로 훈련한 결과이다. 100%가 나와버렸다(?)
 
 ```python
 print(clf.score(vect.transform(x_test), y_test))
 ```
->0.724
+0.724
+{: .notice--success}
 
 테스트셋에서 훈련데이터 만큼의 성능을 보여주지 못하는 것으로 보아 의사결정나무로 훈련시킨 모델은 과적합된 것으로 판단된다.
