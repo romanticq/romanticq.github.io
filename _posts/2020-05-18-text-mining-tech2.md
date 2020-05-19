@@ -28,29 +28,26 @@ last_modified_at: 2020-05-18
 
 감성 사전을 이용하여 텍스트에 담긴 감성을 분석한다. 감성 사전은 단어와 감성지표(긍정, 부정 정도)를 대응시켜놓은 자료이다. 사전 기반 분석에서는 감성 사전의 이용이 필수적이다.
   
-{% capture notice-text %}
-**< 자주 쓰이는 감성 사전(영어) >**
-* `AFINN` : Finn Arup Nielsen이 2009 ~ 2011년에 직접 수집한 감성 어휘들에 대해 -5~+5의 점수를 부여한 사전. 2477개의 감성어가 수록되어있다.
-* `EmoLex` : 단어들을 긍정, 부정뿐만 아니라 공포, 기대, 신뢰, 놀람, 슬픔, 기쁨, 역겨움과 같은 8가지 감정으로 분류함. 인간의 정서 정보를 더욱 풍부하게 반영한다. 14,182개의 감성어를 보유하고 있다.
-* `Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.
-* `SentiWordNet` : 단어들을 긍정, 부정, 중립으로 분류. 파이썬 NLTK패키지에 있어 사용이 간편함.
-{% endcapture %}
-<div class="notice--info">
-  <h4>자주 쓰이는 감성 사전(영어)</h4>
-  {{ notice-text | markdownify }}
-</div>
+**< 자주 쓰이는 감성 사전(영어) >**  
+`AFINN` : Finn Arup Nielsen이 2009 ~ 2011년에 직접 수집한 감성 어휘들에 대해 -5~+5의 점수를 부여한 사전. 2477개의 감성어가 수록되어있다.  
+`EmoLex` : 단어들을 긍정, 부정뿐만 아니라 공포, 기대, 신뢰, 놀람, 슬픔, 기쁨, 역겨움과 같은 8가지 감정으로 분류함. 인간의 정서 정보를 더욱 풍부하게 반영한다. 14,182개의 감성어를 보유하고 있다.  
+`Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.  
+`SentiWordNet` : 단어들을 긍정, 부정, 중립으로 분류. 파이썬 NLTK패키지에 있어 사용이 간편함.  
+{: .notice--info}
   
 한국어 감성 분석의 경우 영어로 번역한 후 감성 분석을 수행하거나 한국어 감성 사전을 이용한다.
 
-**< 한국어 감성 사전 >**
-* `KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>
-* `EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.
+**< 한국어 감성 사전 >**  
+`KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>  
+`EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.  
+{: .notice--info}
 
 ***
 
 **< 영화 리뷰 데이터 감성 분석 >**
   
-> <https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews>{: .notice--info}
+<https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews>
+{: .notice--info}
 
 영화 사이트인 IMDB의 리뷰데이터를 이용해서 감성 분석을 수행한다. 데이터는 위 링크에서 다운받을 수 있다. 해당 데이터는 5만건의 각 영화리뷰에 대해 긍정인지 부정인지 라벨링이 되어있다.  
   
@@ -71,6 +68,7 @@ review = pd.read_csv('E:\\text-mining\\IMDB\IMDB-Dataset.csv', engine="python")
 review.head(10)
 ```
 > ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table1.png?raw=true)
+{: .notice--success}
 
 ***
 
@@ -93,8 +91,9 @@ neg_review = review['review'][3]
 print(afinn.score(pos_review))
 print(afinn.score(neg_review))
 ```
->13.0  
+13.0  
 -8.0
+{: .notice--success}
 
 Afinn 감성 사전을 이용한 감성 분석 결과이다. 긍정리뷰에 해당하는 두 번째 리뷰는 13점이고 부정리뷰에 해당하는 네 번째 리뷰는 -8점이 산출되었다. Afinn 감성 사전을 이용할 경우 라이브러리 자체가 텍스트를 전처리해주고 감성점수를 산출하므로 특별한 전처리 과정이 필요 없다.
 
