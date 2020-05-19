@@ -28,7 +28,7 @@ last_modified_at: 2020-05-18
 
 감성 사전을 이용하여 텍스트에 담긴 감성을 분석한다. 감성 사전은 단어와 감성지표(긍정, 부정 정도)를 대응시켜놓은 자료이다. 사전 기반 분석에서는 감성 사전의 이용이 필수적이다.
   
-< 자주 쓰이는 감성 사전(영어) >
+**< 자주 쓰이는 감성 사전(영어) >**
 * `AFINN` : Finn Arup Nielsen이 2009 ~ 2011년에 직접 수집한 감성 어휘들에 대해 -5~+5의 점수를 부여한 사전. 2477개의 감성어가 수록되어있다.
 * `EmoLex` : 단어들을 긍정, 부정뿐만 아니라 공포, 기대, 신뢰, 놀람, 슬픔, 기쁨, 역겨움과 같은 8가지 감정으로 분류함. 인간의 정서 정보를 더욱 풍부하게 반영한다. 14,182개의 감성어를 보유하고 있다.
 * `Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.
@@ -36,9 +36,19 @@ last_modified_at: 2020-05-18
   
 한국어 감성 분석의 경우 영어로 번역한 후 감성 분석을 수행하거나 한국어 감성 사전을 이용한다.
 
-< 한국어 감성 사전 >
+**< 한국어 감성 사전 >**
 * `KOSAC` : 개발자의 동의를 얻어 사용 가능 <http://word.snu.ac.kr/kosac/index.php>
 * `EmoLex` : 14,182개의 단어에 대해 영어 뿐만 아니라 한국어 포함 105개국 언어에 대한 감성 사전을 제공한다.
+
+***
+
+**< 영화 리뷰 데이터 감성 분석 >**
+  
+> <https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews>
+
+영화 사이트인 IMDB의 리뷰데이터를 이용해서 감성 분석을 수행한다. 데이터는 위 링크에서 다운받을 수 있다. 해당 데이터는 5만건의 각 영화리뷰에 대해 긍정인지 부정인지 라벨링이 되어있다.  
+  
+우선 필요한 패키지들을 import 한다.
 
 ```python
 import pandas as pd
@@ -54,18 +64,7 @@ import matplotlib.pyplot as plt
 review = pd.read_csv('E:\\text-mining\\IMDB\IMDB-Dataset.csv', engine="python")
 review.head(10)
 ```
->||review|	sentiment|
->|---|---|---|
->|0|	One of the other reviewers has mentioned that ... |positive
->|1|	A wonderful little production. <br /><br />The... |positive
->|2|	I thought this was a wonderful way to spend ti... |positive
->|3|	Basically there's a family where a little boy ... |negative
->|4|	Petter Mattei's "Love in the Time of Money" is... |positive
->|5|	Probably my all-time favorite movie, a story o...	|positive
->|6|	I sure would like to see a resurrection of a u...	|positive
->|7|	This show was an amazing, fresh & innovative i...	|negative
->|8|	Encouraged by the positive comments about this...	|negative
->|9|	If you like original gut wrenching laughter yo...	|positive
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table1.png?raw=true)
 
 ***
 
@@ -108,7 +107,7 @@ NRC = pd.read_csv("E:\\text-mining\\NRC-Sentiment-Emotion-Lexicons\\NRC-Emotion-
                   engine="python", header=None, sep="\t")
 NRC.head(20)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table2.png?raw=true)
 
 NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부정 + 8가지의 감정` 총 10가지 척도에 대해 0 또는 1로 라벨링되어있다. 따라서 해당 사전은 약 14만 1820개의 행으로 이루어져 있다. 하나의 단어마다 10개씩의 행으로 이루어진 데이터인 셈이다.
 
@@ -116,7 +115,7 @@ NRC 감성사전은 등록된 14,182개의 각 단어들에 대해 `긍정, 부�
 NRC = NRC[(NRC != 0).all(1)]
 NRC.head(10)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table3.png?raw=true)
 
 감성분석에 필요한 단어들은 1로 라벨링 되어있는 것들이므로 Dataframe.all() 메서드를 통해 유의미한 라벨들만 추출한다. all()의 파라미터로 0을 입력할 경우 위아래로 탐색하며 1을 입력할 경우 좌우로 탐색한다.
 
@@ -125,7 +124,7 @@ NRC.head(10)
 NRC = NRC.reset_index(drop=True)
 NRC.head(10)
 ```
->
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/table4.png?raw=true)
 
 ```python
 tokenizer = RegexpTokenizer('[\w]+')
@@ -158,6 +157,8 @@ negative         1
 sadness          1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
 
+>![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_pos.png?raw=true)
+
 
 위는 긍정 리뷰에 대해 EmoLex 분석을 한 결과이다. 부정 리뷰에 대해서도 마찬가지 과정을 수행한다.
 
@@ -189,6 +190,9 @@ disgust         1
 joy             1  
 dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
 
+> ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/text-mining-tech2/Emo_neg.png?raw=true)
+
+***
 
 ### 4.4.2 지도 기계학습기반 감성 분석
 
@@ -201,7 +205,7 @@ dtype: int64 AxesSubplot(0.125,0.125;0.775x0.755)
 
 ***
 
-**<예제> 영화 리뷰 데이터 감성 분석**  
+**< 영화 리뷰 데이터 감성 분석 >**
   
 마찬가지로 IMDB 데이터를 이용한다. IMDB 리뷰 데이터는 긍정, 부정 라벨링이 완료된 데이터이므로 지도학습 기법을 적용하기에 최적화되어있다. 우선 필요한 패키지들을 import하고 리뷰 데이터를 로드한다.
 
