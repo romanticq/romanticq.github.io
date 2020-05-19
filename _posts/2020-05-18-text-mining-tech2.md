@@ -35,6 +35,10 @@ last_modified_at: 2020-05-18
 * `Bing Liu lexicon` : 감성어들을 긍정, 부정으로만 분류하며 점수지표는 없음. 6800여개의 감성어가 있으며 지속적으로 업데이트 되고 있음.
 * `SentiWordNet` : 단어들을 긍정, 부정, 중립으로 분류. 파이썬 NLTK패키지에 있어 사용이 간편함.
 {% endcapture %}
+<div class="notice--info">
+  <h4>자주 쓰이는 감성 사전(영어)</h4>
+  {{ notice-text | markdownify }}
+</div>
   
 한국어 감성 분석의 경우 영어로 번역한 후 감성 분석을 수행하거나 한국어 감성 사전을 이용한다.
 
