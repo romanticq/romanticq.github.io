@@ -44,7 +44,7 @@ last_modified_at: 2020-05-18
 
 **< 영화 리뷰 데이터 감성 분석 >**
   
-> <https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews>
+> <https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews>{: .notice--info}
 
 영화 사이트인 IMDB의 리뷰데이터를 이용해서 감성 분석을 수행한다. 데이터는 위 링크에서 다운받을 수 있다. 해당 데이터는 5만건의 각 영화리뷰에 대해 긍정인지 부정인지 라벨링이 되어있다.  
   
