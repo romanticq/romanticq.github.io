@@ -46,6 +46,7 @@ last_modified_at: 2020-05-21
 방법은 두 가지이다.
 
 1) python 홈페이지에서 소스 파일을 직업 받아서 설치  
+<br>
 2) PPA(Personal Package Archive) 이용
 {: .notice--info}
 
@@ -72,7 +73,9 @@ $ sudo add-apt-repository --remove 저장소 이름
 ```
 
 1) `$ sudo add-apt-repository 저장소 이름`을 통해 PPA에서 다운로드 하고자 하는 것을 가져온다.  
+<br>
 2) `$ sudo apt-get update` 를 통해 수동적으로 ppa를 추가/삭제 하면 추가/삭제 했다는 신호를 줘야 한다.  
+<br>
 3) `$ sudo apt install 프로그램명` 을 통해 원하는 프로그램을 설치한다.  
 {: .notice--info}
 
@@ -160,7 +163,7 @@ $ source tsflow/bin/activate
 
 가상환경 나오려면 다음 명령어를 입력한다.
 ```
-$deactivate
+$ deactivate
 ```
 
 ***
@@ -233,5 +236,7 @@ python3.6 커널로 생성한 파일에서는 3.6버전임을 확인할 수 있�
 <br>
 3) <https://anpigon.github.io/blog/kr/@anpigon/-virtualenv-python--1546840427366/>  
 <br>
-4) <https://medium.com/@equus3144/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%98%EA%B3%A0-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%97%88%EC%9D%84%EA%B9%8C-8173992f28e2>
+4) <https://medium.com/@equus3144/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%98%EA%B3%A0-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%97%88%EC%9D%84%EA%B9%8C-8173992f28e2>  
+<br>
+5) <https://www.crocus.co.kr/1592>
 {: .notice--info}
