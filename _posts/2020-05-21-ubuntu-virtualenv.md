@@ -29,9 +29,13 @@ last_modified_at: 2020-05-21
 
 무엇을 사용해도 상관 없지만 초심자가 이용하기엔 `virtualenv`가 가장 좋다고 한다. 이유는 관련 reference가 풍부해 오류에 대한 문서를 쉽게 찾을 수 있기 때문이다. `venv`같은 경우 python3에 기본적으로 내장되어 있으며 `virtualenv`와 사용법이 대부분 유사하다. 그러나 이미 구축해놓은 가상 환경의 python에 대해 버전 변경이 안되는 문제가 있다고 한다. 따라서 이 포스팅에서는 `virtualenv`를 통해 가상환경을 구축하는 방법을 소개할 것이다.
 
+***
+
 # 2. 현재 환경
 
 현재 로컬에 설치된 파이썬은 3.8버전이다. tensorflow가 아직 3.8버전에서 완벽히 호환되지 않아 오류가 발생하는 경우가 있으므로 python3.6 버전을 이용할 수 있는 가상 환경을 구축하는 것이 목표이다.
+
+***
 
 # 3. python 3.6 설치
 
@@ -93,6 +97,8 @@ python3.6m
 python3.8
 python3.8-config
 ```
+
+***
 
 # 4. virtualenv 라이브러리 설치
 
@@ -157,6 +163,8 @@ $ source tsflow/bin/activate
 $deactivate
 ```
 
+***
+
 # 5. jupyter notebook에서 실행하기
 
 ## 5.1 새로운 커널 추가
@@ -215,3 +223,15 @@ python3.6 커널로 생성한 파일에서는 3.6버전임을 확인할 수 있�
 
 가상환경에 numpy 최신 버전을 설치했더니 import 오류가 발생했다. 최신 버전의 넘파이가 python3.6과 호환에 문제가 있는것으로 판단되어 삭제 후 가상환경에 1.18.1 버전으로 다시 설치했더니 해결되었다.
 {: .notice--danger}
+
+***
+
+# 참고
+1) <https://medium.com/%EB%8F%84%EC%84%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9B%B9%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%8B%A4%EC%A0%84%ED%8E%B8-%EC%9A%94%EC%95%BD/chapter-6-%EA%B0%80%EC%83%81-%ED%99%98%EA%B2%BD-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%83%88%EB%A1%AD%EA%B2%8C-%EC%A0%95%EB%A6%AC-30d5940de012>  
+<br>
+2) <https://worthpreading.tistory.com/84>  
+<br>
+3) <https://anpigon.github.io/blog/kr/@anpigon/-virtualenv-python--1546840427366/>  
+<br>
+4) <https://medium.com/@equus3144/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%98%EA%B3%A0-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%80-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%97%88%EC%9D%84%EA%B9%8C-8173992f28e2>
+{: .notice--info}
