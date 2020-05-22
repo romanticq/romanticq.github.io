@@ -84,14 +84,14 @@ train.shape
 ```
 
 (891, 12)
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test.shape
 ```
 
 (418, 11)
-{: .notice--info}
+{: .notice--warning}
 
 훈련 데이터는 891개의 행과 12개의 열로 이루어져 있다. 테스트 데이터는 훈련 데이터로 학습시킨 모델을 통해 라벨링을 해야하므로 타깃(라벨)에 해당하는 `Survived` 열이 빠진 상태이다.  
   
@@ -102,14 +102,14 @@ train.info()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/2.2_train_info(1).png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test.info()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/2.2_test_info(1).png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 `info()`는 dataframe에 대해 각 series(column)의 타입(정수, 실수, 문자 등)과 결측치 개수의 정보를 요약해서 보여준다. 결측치가 정확히 몇개인지는 아래 코드를 통해 알 수 있다.
 
@@ -133,7 +133,7 @@ Fare             0
 Cabin          687  
 Embarked         2  
 dtype: int64
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test.isnull().sum()
@@ -151,7 +151,7 @@ Fare             1
 Cabin          327  
 Embarked         0  
 dtype: int64
-{: .notice--info}
+{: .notice--warning}
 
 
 ## 2.3 데이터 시각화
@@ -198,7 +198,7 @@ bar_chart('SibSp')
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/2.3_bar_pclass.png?raw=true)
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/2.3_bar_embarked.png?raw=true)
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/2.3_bar_sibsp.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 데이터를 시각화하여 살펴본 결과 남성보단 여성이 많이 생존했으며 1등급 승객, 가족이 있는 승객이 생존율이 높았다. 탑승 지역에서의 특별한 경향은 아직 보인다고 말하긴 어려워 보이나 일단 비율상으로는 S 승객들이 많이 사망했다.
 
@@ -227,7 +227,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.1_sex_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 
 ## 3.2 SibSp & Parch
@@ -249,7 +249,7 @@ bar_chart('IsAlone')
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.2_isalone.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 위에서 확인한대로 혼자 탄 사람이 많이 사망했음을 알 수 있다. 전처리가 되어있는지 확인해보자.
 
@@ -258,7 +258,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.2_isalone_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 
 ## 3.3 Embarked
@@ -277,7 +277,7 @@ df.plot(kind="bar", figsize=(10,5))
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.3_bar_embarked.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 Q지역이 비교적 다른지역보다 못사는 것으로 보인다. 그러나 대부분의 승객이 S지역에서 탑승했으므로 `Embarked`의 결측치는 S로 채운다.
 
@@ -298,7 +298,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.3_embarked_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 
 ## 3.4 Name
@@ -347,7 +347,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.4_title_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 영어 호칭의 종류 및 분포를 확인하기 위해 `value_counts()` 메서드를 이용한다.
 
@@ -373,7 +373,7 @@ Sir           1
 Ms            1  
 Mme           1  
 Name: Title, dtype: int64  
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test['Title'].value_counts()
@@ -389,7 +389,7 @@ Dona        1
 Ms          1  
 Dr          1  
 Name: Title, dtype: int64  
-{: .notice--info}
+{: .notice--warning}
 
 성별, 지역과 마찬가지로 각 호칭들을 숫자에 매핑한다. Mr, Miss, Mrs, Master가 대부분을 차지하고 있으므로 나머지 호칭에 대해서는 하나로 취급한다.
 
@@ -416,7 +416,7 @@ train['Title'].value_counts()
 3     40  
 4     27  
 Name: Title, dtype: int64  
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test['Title'].value_counts()
@@ -428,14 +428,14 @@ test['Title'].value_counts()
 3     21  
 4      7  
 Name: Title, dtype: int64  
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 bar_chart('Title')
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.4_bar_title.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 성인 남성에 해당하는 Mr가 압도적으로 사망률이 높으며, 여성에 해당하는 Miss와 Mrs는 많이 생존하였으나 가족이 없는 Miss쪽이 생존율이 더 낮은 것을 확인할 수 있다. Master는 남성이지만 어린 아이가 많아 사망률보다 생존률이 더 높다. 매핑이 잘 이루어졌는지 확인해보자.
 
@@ -463,7 +463,7 @@ E17            1
 C45            1  
 A6             1  
 Name: Cabin, Length: 147, dtype: int64
-{: .notice--info}
+{: .notice--warning}
 
 
 숫자 정보는 제외하고 알파벳만 추출한다.
@@ -488,7 +488,7 @@ df.plot(kind="bar", figsize=(10,5))
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.5_bar_cabin.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 우선 1등급과 3등급은 공유하는 알파벳이 없다. 그러나 cabin에 대한 정보는 결측치가 과반수 이상이고 그마저도 1등급에 매우 편향되어있다.  
   
@@ -517,7 +517,7 @@ g = (g.map(sns.kdeplot, "Age").add_legend()) # add_legend()는 범주를 추가�
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.6_age_kde.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 grouping 기준은 여러가지가 있을 수 있다. 생존그래프와 사망그래프의 교점을 기준으로 할 수도 있겠지만 두 그래프의 교점을 파악하는 방법을 아직 찾지 못했다. 또한 해당 교점은 train 데이터만을 설명하는 너무 특수한 기준일 수 있다.  
 
@@ -540,7 +540,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.6_agebin_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 직접 데이터가 나뉘는 지점을 정해서 나누고 싶다면 다음 코드를 실행하면 된다. 여기서는 이용하지 않는다.
 
@@ -573,7 +573,7 @@ g = (g.map(sns.kdeplot, "Fare")
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.7_fare_kde.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 승객별로 탑승요금의 편차가 굉장히 크고 분포는 우측 꼬리가 길게 편향되어 있다. 따라서 데이터를 그룹화할때 `길이`가 아닌 `개수`를 기준으로 나눈다음 `Farebin`이라는 열에 저장한다.
 
@@ -601,14 +601,14 @@ pd.qcut(train['Fare'], 4)
 890     (-0.001, 7.91]  
 Name: Fare, Length: 891, dtype: category  
 Categories (4, interval[float64]): [(-0.001, 7.91] < (7.91, 14.454] < (14.454, 31.0] < (31.0, 512.329]]
-{: .notice--info}
+{: .notice--warning}
 
 `Farebin`이 잘 만들어졌는지 확인해보자.
 
 train.head()
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.7_farebin_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 전처리가 끝났거나 훈련에 이용하지 않을 column은 삭제한다.
 
@@ -629,7 +629,7 @@ train.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.7_final_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 
 각 feature들에 대한 전처리는 이것으로 완료되었다. 결측치가 제대로 채워졌는지 마지막으로 확인한다.
@@ -639,14 +639,14 @@ train.info()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.7_final_train_info.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 test.info()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/3.7_final_test_info.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 ***
 
@@ -677,7 +677,7 @@ clf.score(train_data, target)
 ```
 
 0.8103254769921436
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 clf = DecisionTreeClassifier()
@@ -686,7 +686,7 @@ clf.score(train_data, target)
 ```
 
 0.8900112233445566
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 clf = RandomForestClassifier()
@@ -695,7 +695,7 @@ clf.score(train_data, target)
 ```
 
 0.8900112233445566
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 clf = GaussianNB()
@@ -704,7 +704,7 @@ clf.score(train_data, target)
 ```
 
 0.7968574635241302
-{: .notice--info}
+{: .notice--warning}
 
 ```python
 clf = SVC()
@@ -713,7 +713,7 @@ clf.score(train_data, target)
 ```
 
 0.8338945005611672
-{: .notice--info}
+{: .notice--warning}
 
 의사결정나무가 점수가 가장 높으므로 해당 모델을 테스트 데이터에 적용한다.
 
@@ -742,7 +742,7 @@ submission.head()
 ```
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic/4_submission_head.png?raw=true)
-{: .notice--info}
+{: .notice--warning}
 
 제대로 저장되었는지 확인해본다.
 
