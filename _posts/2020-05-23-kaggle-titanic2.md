@@ -318,6 +318,8 @@ submission = pd.DataFrame({
 submission.to_csv('submission_tree_reg.csv', index=False)
 ```
 
+# 5. 결과
+
 캐글에 제출한 결과이다.
 
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/kaggle-titanic2/submission_score.png?raw=true)
