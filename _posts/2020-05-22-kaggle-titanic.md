@@ -1,5 +1,5 @@
 ---
-title: "캐글 타이타닉 생존자 예측 모델 만들기"
+title: "캐글 타이타닉1 - 생존자 예측 모델 만들기"
 excerpt: "python의 scikit-learn을 통해 캐글-타이타닉 생존자 예측 모델을 만든다."
 toc: true
 toc_sticky: true
