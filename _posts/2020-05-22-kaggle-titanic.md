@@ -7,9 +7,9 @@ header:
   teaser: /assets/images/3280_1552550473.jpg
 
 categories:
-  - 머신러닝
+  - 캐글
 tags:
-  - 분류 지도학습
+  - 타이타닉
 
 use_math: true
 
