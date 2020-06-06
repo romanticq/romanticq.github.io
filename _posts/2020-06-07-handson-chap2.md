@@ -1,4 +1,27 @@
-Hands-on 머신러닝 책의 2장 내용을 캐글-타이타닉 문제에 맞게 재구성한다. 책의 예제는 주택가격을 예측하는 회귀문제이다. 그러나 타이타닉은 생존자를 예측하는 분류문제다. 따라서 모델 성능 지표를 `ROC 곡선`으로 택한다.
+---
+title: "캐글 타이타닉3 - 핸즈온 머신러닝 챕터2 적용"
+excerpt: "핸즈온 머신러닝 챕터2 순서에 맞춰 캐글-타이타닉을 재구성한다."
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/3280_1552550473.jpg
+
+categories:
+  - 캐글
+tags:
+  - 타이타닉
+
+use_math: true
+
+last_modified_at: 2020-06-07
+---
+
+
+Hands-on 머신러닝 책의 2장 내용을 캐글-타이타닉 문제에 맞게 재구성한다. 책의 예제는 주택가격을 예측하는 회귀문제이다. 그러나 타이타닉은 생존자를 예측하는 분류문제다. 따라서 모델 성능 지표를 `ROC 곡선`으로 택한다.  
+  
+아래 링크의 포스팅과 겹치는 부분은 제외한다.
+
+[캐글 타이타닉1 - 생존자 예측 모델 만들기](https://romanticq.github.io/%EC%BA%90%EA%B8%80/kaggle-titanic/)
 
 # 1. 데이터 불러오기
 
@@ -638,6 +661,8 @@ train.info()
     memory usage: 222.9+ KB
 
 
+***
+
 # 3. 모델 선택 & 학습
 
 
@@ -834,7 +859,7 @@ pd.DataFrame(proba_score)
 <p>891 rows × 2 columns</p>
 </div>
 
-
+***
 
 ## 3.2 모델 평가
 
@@ -923,6 +948,8 @@ roc_auc_score(target, y_score)
 
 
 204개의 임계값에 대해 특이도와 민감도를 계산해서 그린 ROC 곡선이다.
+
+***
 
 # 4. 모델 파라미터 튜닝
 
