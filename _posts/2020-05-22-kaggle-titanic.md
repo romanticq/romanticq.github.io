@@ -13,8 +13,14 @@ tags:
 
 use_math: true
 
-last_modified_at: 2020-05-22
+last_modified_at: 2020-06-08
 ---
+
+아래 포스팅의 jupyter notebook 파일은 아래 링크에서 확인할 수 있습니다.
+
+[캐글 타이타닉1 주피터 노트북](https://github.com/romanticq/Kaggle/blob/master/Titanic.ipynb)
+{: .notice--info}
+
 
 # 1. 문제 정의
 

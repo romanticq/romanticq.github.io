@@ -13,10 +13,13 @@ tags:
 
 use_math: true
 
-last_modified_at: 2020-06-07
+last_modified_at: 2020-06-08
 ---
 
+아래 포스팅의 jupyter notebook 파일은 아래 링크에서 확인할 수 있습니다.
 
+[캐글 타이타닉3 주피터 노트북](https://github.com/romanticq/Kaggle/blob/master/Titanic3_handson_chapter2.ipynb)
+{: .notice--info}
 
 Hands-on 머신러닝 책의 2장 내용을 캐글-타이타닉 문제에 맞게 재구성한다. 책의 예제는 주택가격을 예측하는 회귀문제이다. 그러나 타이타닉은 생존자를 예측하는 분류문제다. 따라서 모델 성능 지표를 `ROC 곡선`으로 택한다.  
   
