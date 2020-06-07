@@ -26,6 +26,7 @@ Hands-on 머신러닝 책의 2장 내용을 캐글-타이타닉 문제에 맞게
 아래 링크의 포스팅과 겹치는 부분은 제외한다.
 
 [캐글 타이타닉1 - 생존자 예측 모델 만들기](https://romanticq.github.io/%EC%BA%90%EA%B8%80/kaggle-titanic/)
+{: .notice--info}
 
 # 1. 데이터 불러오기
 
@@ -235,7 +236,7 @@ train.head()
 `min-max scaling`은 데이터의 크기를 0~1 사이로 조절한다. 내용과 코드에 대한 설명은 아래 링크를 참조하자.
 
 [min-max 스케일링](https://romanticq.github.io/%EC%BA%90%EA%B8%80/kaggle-titanic2/#11-age--min-max-%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81)
-
+{: .notice--info}
 
 ```python
 from sklearn.preprocessing import MinMaxScaler
@@ -254,7 +255,7 @@ for dataset in train_test_data:
 `표준화`는 연속변수를 정규분포의 Z변수에 대응시킨다. 설명은 아래 링크 참조.
 
 [표준화(standarization)](https://romanticq.github.io/%EC%BA%90%EA%B8%80/kaggle-titanic2/#12-fare--%ED%91%9C%EC%A4%80%ED%99%94standardization)
-
+{: .notice--info}
 
 ```python
 from sklearn.preprocessing import StandardScaler
@@ -758,7 +759,7 @@ target = train['Survived']
 랜덤 포레스트 모델에 대해 k-겹 교차검증을 진행한다. 교차검증에 대한 설명은 아래 링크 참조.
 
 [k-겹 교차검증](https://romanticq.github.io/%EC%BA%90%EA%B8%80/kaggle-titanic2/#3-k-%EA%B2%B9-%EA%B5%90%EC%B0%A8-%EA%B2%80%EC%A6%9Dk-fold-cross-validation--%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC)
-
+{: .notice--info}
 
 ```python
 # 랜덤 포레스트 패키지
