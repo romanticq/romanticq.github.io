@@ -16,9 +16,11 @@ use_math: true
 last_modified_at: 2020-07-15
 ---
 
-이 포스팅의 jupyter notebook 파일은 아래 링크에서 확인할 수 있습니다.
+이 포스팅의 jupyter notebook 파일과 예제에 사용되는 데이터셋은 아래 링크에서 확인할 수 있습니다.
 
-[텍스트 마이닝 기법3 주피터 노트북](https://github.com/romanticq/TextMining/blob/master/04.%20TextMiningTechnique3.ipynb)
+[텍스트 마이닝 기법3 주피터 노트북](https://github.com/romanticq/TextMining/blob/master/04.%20TextMiningTechnique3.ipynb)  
+<br>
+[영화 리뷰 데이터](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
 {: .notice--info}
 
 ## 4.5 연관어 분석
