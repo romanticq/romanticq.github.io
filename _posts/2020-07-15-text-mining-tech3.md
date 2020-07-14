@@ -7,9 +7,9 @@ header:
   teaser: /assets/images/3280_1552550473.jpg
 
 categories:
-  - 캐글
+  - 머신러닝
 tags:
-  - 타이타닉
+  - 텍스트 마이닝
 
 use_math: true
 
