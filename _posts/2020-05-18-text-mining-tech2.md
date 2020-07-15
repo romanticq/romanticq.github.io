@@ -12,7 +12,7 @@ tags:
   - 텍스트 마이닝
 
 use_math: true
-last_modified_at: 2020-05-18
+last_modified_at: 2020-07-15
 ---
 
 ## 4.4 감성분석
@@ -311,4 +311,7 @@ print(clf.score(vect.transform(x_test), y_test))
 0.724
 {: .notice--warning}
 
-테스트셋에서 훈련데이터 만큼의 성능을 보여주지 못하는 것으로 보아 의사결정나무로 훈련시킨 모델은 과적합된 것으로 판단된다.
+테스트셋에서 훈련데이터 만큼의 성능을 보여주지 못하는 것으로 보아 의사결정나무로 훈련시킨 모델은 과대적합된 것으로 판단된다.
+
+출처 : 잡아라! 텍스트 마이닝 with 파이썬 (서대호)
+{: .notice--success}

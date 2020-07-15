@@ -12,7 +12,7 @@ tags:
   - 텍스트 마이닝
 
 use_math: true
-last_modified_at: 2020-05-07
+last_modified_at: 2020-07-15
 ---
 
 # 4. 텍스트 마이닝 기법
@@ -564,3 +564,5 @@ plt.show()
 ```
 > ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/coherence.png?raw=true)
 
+출처 : 잡아라! 텍스트 마이닝 with 파이썬 (서대호)
+{: .notice--success}

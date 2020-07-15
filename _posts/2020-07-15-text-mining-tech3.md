@@ -1984,6 +1984,5 @@ for x in range(10):
     
 
 
-```python
-
-```
+출처 : 잡아라! 텍스트 마이닝 with 파이썬 (서대호)
+{: .notice--success}
