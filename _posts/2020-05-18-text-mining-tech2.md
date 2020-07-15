@@ -15,6 +15,11 @@ use_math: true
 last_modified_at: 2020-07-15
 ---
 
+이 포스팅의 jupyter notebook 파일은 아래 링크에서 확인할 수 있습니다.
+
+[텍스트 마이닝 기법2 주피터 노트북](https://github.com/romanticq/TextMining/blob/master/04.%20TextMiningTechnique2.ipynb)
+{: .notice--info}
+
 ## 4.4 감성분석
 
 감성분석은 텍스트에 나타난 긍정, 부정요소를 정량화하는 작업으로 다음과 같은 일들을 수행한다.
