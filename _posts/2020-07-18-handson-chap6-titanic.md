@@ -617,9 +617,11 @@ $$J(k,t_k) = {m_1 \over m}MSE_1 + {m_2 \over m}MSE_2$$
 
 여기서 $MSE_1$, $MSE_2$는 자식 노드의 평균제곱오차이고 $m_1$, $m_2$는 자식 노드의 샘플 수이다. 평균제곱오차는 다음 식으로 구한다.
 
-$$MSE_{node} = {1 \over m_{node}}\sum_{i \in node}{\left( \hat{y}_{node} - y^{(i)} \right)^2}$$  
+$$MSE_{node} = {1 \over m_{node}}\sum_{i \in node}{\left( \hat{y}_ {node} - y^{(i)} \right)^2}$$  
+
 <br>
-$$\hat{y}_{node} = {1 \over m_{node}}\sum_{i \in node}{y^{(i)}}$$
+
+$$\hat{y}_ {node} = {1 \over m_{node}}\sum_{i \in node}{y^{(i)}}$$
 
 
 # Reference
