@@ -619,8 +619,6 @@ $$J(k,t_k) = {m_1 \over m}MSE_1 + {m_2 \over m}MSE_2$$
 
 $$MSE_{node} = {1 \over m_{node}}\sum_{i \in node}{\left( \hat{y}_ {node} - y^{(i)} \right)^2}$$  
 
-<br>
-
 $$\hat{y}_ {node} = {1 \over m_{node}}\sum_{i \in node}{y^{(i)}}$$
 
 
