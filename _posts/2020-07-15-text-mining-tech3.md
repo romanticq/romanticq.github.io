@@ -21,7 +21,7 @@ last_modified_at: 2020-07-15
 [텍스트 마이닝 기법3 주피터 노트북](https://github.com/romanticq/TextMining/blob/master/04.%20TextMiningTechnique3.ipynb)  
 <br>
 [영화 리뷰 데이터](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
-{: .notice--info}
+{: .notice--success}
 
 ## 4.5 연관어 분석
 

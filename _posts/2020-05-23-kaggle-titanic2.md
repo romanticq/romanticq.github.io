@@ -18,8 +18,10 @@ last_modified_at: 2020-06-08
 
 아래 포스팅의 jupyter notebook 파일은 아래 링크에서 확인할 수 있습니다.
 
-[캐글 타이타닉2 주피터 노트북](https://github.com/romanticq/Kaggle/blob/master/Titanic2.ipynb)
-{: .notice--info}
+[캐글 타이타닉2 주피터 노트북](https://github.com/romanticq/Kaggle/blob/master/Titanic2.ipynb)  
+<br>
+[캐글 타이타닉 데이터셋](https://www.kaggle.com/c/titanic/data)
+{: .notice--success}
 
 지난 포스팅에서 타이타닉의 생존자 예측 모델을 생성해보았다. 데이터 전처리에는 꽤 많은 공을 들였지만 학습 과정에서 모델 파라미터를 하나도 조절하지 않은 점이 아쉬웠다. 이번에는 모델을 조금 더 정교하게 만드는 방법들을 적용해보고자 한다.
 
