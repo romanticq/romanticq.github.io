@@ -272,6 +272,7 @@ Image(filename = 'kaggle_tree.png')
 
 ![png](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/handson-chap6/output_9_0.png?raw=true)
 
+***
 
 
 # 2. 예측하기
