@@ -11,7 +11,7 @@ categories:
 tags:
   - 타이타닉
 
-use_math: true
+
 
 last_modified_at: 2020-07-18
 ---
