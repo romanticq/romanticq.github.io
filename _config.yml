@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "RomanticQ의 머신러닝"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "RomanticQ"
+name                     : "RomanticQ의 머신러닝"
 description              : "반갑습니다."
 url                      : "https://romanticq.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -93,8 +93,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "RomanticQ"
-  avatar           : "/assets/images/3280_1552550473.jpg"
+  name             : "이태규"
+  avatar           : "/assets/images/selfie.jpg"
   bio              : "반갑습니다."
   location         : "Republic of Korea"
   email            : "romantic_q@naver.com"
