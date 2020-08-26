@@ -90,7 +90,7 @@ great        6
 world        6  
 dtype: int64
 
-- `RegexpTokenizer('[\w]+')` : 정규표현식 `[\w]+`에 해당하는 내용을 제거한 뒤 tokenize 실행.
+- `RegexpTokenizer('[\w]+')` : 정규표현식 `[\w]+`에 해당하는 내용으로 tokenize 실행.
 
 ***
 
