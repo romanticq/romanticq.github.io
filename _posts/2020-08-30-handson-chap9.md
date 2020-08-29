@@ -105,7 +105,7 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![png](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/handson-chap9/output_7_0.png?raw=true)
 
 
 ***
@@ -484,7 +484,7 @@ plt.show()
 ```
 
 
-![png](output_33_0.png)
+![png](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/handson-chap9/output_33_0.png?raw=true)
 
 
 
