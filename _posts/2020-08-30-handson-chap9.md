@@ -426,7 +426,7 @@ from sklearn.datasets import load_digits
   
 (1) 데이터셋을 k=50으로 클러스터링 한다.  
 <br>
-(2) 각 클러스터에서 센트로이드와 가장 가까운 이미지를 찾는다. 이를 **대표(representative)** 라 부른다.
+(2) 각 클러스터에서 센트로이드와 가장 가까운 이미지를 찾는다. 이를 **대표(representative)** 라 부른다.  
 <br>
 (3) representative만 수동으로 labeling 한다.  
 <br>
