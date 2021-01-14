@@ -55,19 +55,12 @@ last_modified_at: 2020-08-09
 
 앙상블 학습은 결국 다양한 분류기를 만들어내는 것이 핵심이다. 다양한 분류기를 만드는 방법 중 하나는 서로 다른 알고리즘을 가진 분류기를 만드는 것이다. 그림으로 표현하면 다음과 같다.  
 
-***
-
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/handson-chap7/ensemble1.png?raw=true)
 
-***
 
 분류 알고리즘은 여러가지가 존재한다. 로지스틱회귀, SVM, 랜덤 포레스트 등 다양한 분류기에 하나의 훈련 데이터를 학습시킨다. 그리고 예측은 다수결로 진행한다. 각 모델들이 제시한 예측을 모아 가장 많은 투표를 받은 클래스를 예측 결과로 택한다.  
 
-***
-
 ![](https://github.com/romanticq/romanticq.github.io/blob/master/assets/images/handson-chap7/ensemble2.png?raw=true)
-
-***
 
 투표 기반 분류기의 성능 확인을 위해 타이타닉 데이터를 학습시켜보자. 분류 문제이므로 성능 지표는 AUC를 이용한다.
 
